@@ -18,9 +18,9 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <TextField layoutX="219.0" layoutY="106.0" />
-      <Button layoutX="152.0" layoutY="184.0" mnemonicParsing="false" text="Aceptar" />
-      <Button cancelButton="true" layoutX="248.0" layoutY="184.0" mnemonicParsing="false" text="Cancelar" />
+      <TextField fx:id="pinIn" layoutX="219.0" layoutY="106.0" />
+      <Button fx:id="aceptarCredenciales" layoutX="152.0" layoutY="184.0" mnemonicParsing="false" onAction="#pulsarAceptarCredenciales" text="Aceptar" />
+      <Button fx:id="cancelarCredenciales" cancelButton="true" layoutX="248.0" layoutY="184.0" mnemonicParsing="false" onAction="#pulsarCancelarCredenciales" text="Cancelar" />
       <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagen1.png" />
@@ -44,59 +44,59 @@
           <RowConstraints maxHeight="39.20001831054688" minHeight="10.0" prefHeight="32.79999389648438" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="1">
+            <Button fx:id="numeroUno" mnemonicParsing="false" onAction="#pulsarUno" text="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="2" GridPane.columnIndex="1">
+            <Button fx:id="numeroDos" mnemonicParsing="false" onAction="#pulsarDos" text="2" GridPane.columnIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="3" GridPane.columnIndex="2">
+            <Button fx:id="numeroTres" mnemonicParsing="false" onAction="#pulsarTres" text="3" GridPane.columnIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="4" GridPane.rowIndex="1">
+            <Button fx:id="numeroCuatro" mnemonicParsing="false" onAction="#pulsarCuatro" text="4" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="NumeroCinco" mnemonicParsing="false" onAction="#pulsarCinco" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="numeroSeis" mnemonicParsing="false" onAction="#pulsarSeis" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="7" GridPane.rowIndex="2">
+            <Button fx:id="numeroSiete" mnemonicParsing="false" onAction="#PulsarSiete" text="7" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="numeroOcho" mnemonicParsing="false" onAction="#PulsarOcho" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="numeroNueve" mnemonicParsing="false" onAction="#PulsarNueve" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="numeroCero" mnemonicParsing="false" onAction="#PulsarCero" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
          </children>
       </GridPane>
-      <TextField layoutX="219.0" layoutY="68.0" />
+      <TextField fx:id="idIn" layoutX="219.0" layoutY="68.0" />
       <Label layoutX="140.0" layoutY="72.0" prefHeight="17.0" prefWidth="81.0" text="Identificación">
          <font>
             <Font name="System Bold" size="12.0" />
