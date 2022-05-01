@@ -44,52 +44,52 @@
           <RowConstraints maxHeight="39.20001831054688" minHeight="10.0" prefHeight="32.79999389648438" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="numeroUno" mnemonicParsing="false" onAction="#pulsarUno" text="1">
+            <Button fx:id="numeroUno" focusTraversable="false" mnemonicParsing="false" onAction="#pulsarUno" text="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="numeroDos" mnemonicParsing="false" onAction="#pulsarDos" text="2" GridPane.columnIndex="1">
+            <Button fx:id="numeroDos" focusTraversable="false" mnemonicParsing="false" onAction="#pulsarDos" text="2" GridPane.columnIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="numeroTres" mnemonicParsing="false" onAction="#pulsarTres" text="3" GridPane.columnIndex="2">
+            <Button fx:id="numeroTres" focusTraversable="false" mnemonicParsing="false" onAction="#pulsarTres" text="3" GridPane.columnIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="numeroCuatro" mnemonicParsing="false" onAction="#pulsarCuatro" text="4" GridPane.rowIndex="1">
+            <Button fx:id="numeroCuatro" focusTraversable="false" mnemonicParsing="false" onAction="#pulsarCuatro" text="4" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="NumeroCinco" mnemonicParsing="false" onAction="#pulsarCinco" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="NumeroCinco" focusTraversable="false" mnemonicParsing="false" onAction="#pulsarCinco" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="numeroSeis" mnemonicParsing="false" onAction="#pulsarSeis" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="numeroSeis" focusTraversable="false" mnemonicParsing="false" onAction="#pulsarSeis" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="numeroSiete" mnemonicParsing="false" onAction="#PulsarSiete" text="7" GridPane.rowIndex="2">
+            <Button fx:id="numeroSiete" focusTraversable="false" mnemonicParsing="false" onAction="#PulsarSiete" text="7" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="numeroOcho" mnemonicParsing="false" onAction="#PulsarOcho" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="numeroOcho" focusTraversable="false" mnemonicParsing="false" onAction="#PulsarOcho" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="numeroNueve" mnemonicParsing="false" onAction="#PulsarNueve" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="numeroNueve" focusTraversable="false" mnemonicParsing="false" onAction="#PulsarNueve" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="numeroCero" mnemonicParsing="false" onAction="#PulsarCero" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="numeroCero" focusTraversable="false" mnemonicParsing="false" onAction="#PulsarCero" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
