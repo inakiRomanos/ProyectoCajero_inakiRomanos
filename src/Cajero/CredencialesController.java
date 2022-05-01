@@ -62,7 +62,7 @@ public class CredencialesController implements Initializable {
 
     @FXML
     private void pulsarAceptarCredenciales(ActionEvent event) {
-        int identificacion = Integer.parseInt(idIn.toString());
+        
     }
 
     @FXML
