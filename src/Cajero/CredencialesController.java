@@ -4,13 +4,20 @@
  */
 package Cajero;
 
+import static Cajero.ComprobarCredenciales.comprobar;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -51,6 +58,8 @@ public class CredencialesController implements Initializable {
     String nuevoPin = "";
     String nuevoId = "";
     
+    static public String pinSalida;
+    static public String idSalida;
 
     /**
      * Initializes the controller class.
@@ -61,8 +70,22 @@ public class CredencialesController implements Initializable {
     }    
 
     @FXML
-    private void pulsarAceptarCredenciales(ActionEvent event) {
+    private void pulsarAceptarCredenciales(ActionEvent event) throws IOException {
+        pinSalida = pinIn.getText();
+        idSalida = idIn.getText();
+        ComprobarCredenciales.comprobacion();
         
+        switch (VentanaPrincipalController.operacion) {
+            case 1:
+                if (ComprobarCredenciales.comprobar == true) {
+                    FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("Operacion.fxml"));
+                    Parent root = (Parent) fmxlLoader.load();
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(root));
+                    stage.show();
+                }
+                else{JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");}
+        }
     }
 
     @FXML
