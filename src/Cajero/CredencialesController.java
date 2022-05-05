@@ -4,7 +4,6 @@
  */
 package Cajero;
 
-import static Cajero.ComprobarCredenciales.comprobar;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -74,12 +73,12 @@ public class CredencialesController implements Initializable {
     private void pulsarAceptarCredenciales(ActionEvent event) throws IOException {
         pinSalida = pinIn.getText();
         idSalida = idIn.getText();
-        ComprobarCredenciales.comprobacion();
+        ComprobarCredenciales.comprobacionPin();
 
         switch (VentanaPrincipalController.operacion) {
             case 1:
-                if (ComprobarCredenciales.comprobar == true) {
-                    FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("Operacion.fxml"));
+                if (Main.comprobar) {
+                    FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("PanelOperacion.fxml"));
                     Parent root = (Parent) fmxlLoader.load();
                     Stage stageUno = new Stage();
                     stageUno.setScene(new Scene(root));
@@ -91,8 +90,8 @@ public class CredencialesController implements Initializable {
                 break;
 
             case 2:
-                if (ComprobarCredenciales.comprobar == true) {
-                    FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("Operacion.fxml"));
+                if (Main.comprobar == true) {
+                    FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("PanelOperacion.fxml"));
                     Parent root = (Parent) fmxlLoader.load();
                     Stage stageDos = new Stage();
                     stageDos.setScene(new Scene(root));
@@ -103,7 +102,7 @@ public class CredencialesController implements Initializable {
                 break;
 
             case 3:
-                if (ComprobarCredenciales.comprobar == true) {
+                if (Main.comprobar == true) {
                     FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("TablaConsultas.fxml"));
                     Parent root = (Parent) fmxlLoader.load();
                     Stage stageTres = new Stage();
