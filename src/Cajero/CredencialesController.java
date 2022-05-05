@@ -85,6 +85,7 @@ public class CredencialesController implements Initializable {
                     stage.show();
                 }
                 else{JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");}
+                break;
                 
                 case 2:
                 if (ComprobarCredenciales.comprobar == true) {
@@ -95,18 +96,9 @@ public class CredencialesController implements Initializable {
                     stage.show();
                 }
                 else{JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");}
+                break;
                 
                 case 3:
-                if (ComprobarCredenciales.comprobar == true) {
-                    FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("NuevoPin.fxml"));
-                    Parent root = (Parent) fmxlLoader.load();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root));
-                    stage.show();
-                }
-                else{JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");}
-                
-                case 4:
                 if (ComprobarCredenciales.comprobar == true) {
                     FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("TablaConsultas.fxml"));
                     Parent root = (Parent) fmxlLoader.load();
@@ -115,6 +107,8 @@ public class CredencialesController implements Initializable {
                     stage.show();
                 }
                 else{JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");}
+                break;
+
         }
     }
 
