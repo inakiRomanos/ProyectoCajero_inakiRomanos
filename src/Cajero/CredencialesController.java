@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -54,10 +55,10 @@ public class CredencialesController implements Initializable {
     private Button numeroNueve;
     @FXML
     private Button numeroCero;
-    
+
     String nuevoPin = "";
     String nuevoId = "";
-    
+
     static public String pinSalida;
     static public String idSalida;
 
@@ -67,174 +68,177 @@ public class CredencialesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void pulsarAceptarCredenciales(ActionEvent event) throws IOException {
         pinSalida = pinIn.getText();
         idSalida = idIn.getText();
         ComprobarCredenciales.comprobacion();
-        
+
         switch (VentanaPrincipalController.operacion) {
             case 1:
                 if (ComprobarCredenciales.comprobar == true) {
                     FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("Operacion.fxml"));
                     Parent root = (Parent) fmxlLoader.load();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root));
-                    stage.show();
+                    Stage stageUno = new Stage();
+                    stageUno.setScene(new Scene(root));
+                    stageUno.show();
+                } else {
+                    JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");
                 }
-                else{JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");}
+
                 break;
-                
-                case 2:
+
+            case 2:
                 if (ComprobarCredenciales.comprobar == true) {
                     FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("Operacion.fxml"));
                     Parent root = (Parent) fmxlLoader.load();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root));
-                    stage.show();
+                    Stage stageDos = new Stage();
+                    stageDos.setScene(new Scene(root));
+                    stageDos.show();
+                } else {
+                    JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");
                 }
-                else{JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");}
                 break;
-                
-                case 3:
+
+            case 3:
                 if (ComprobarCredenciales.comprobar == true) {
                     FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("TablaConsultas.fxml"));
                     Parent root = (Parent) fmxlLoader.load();
-                    Stage stage = new Stage();
-                    stage.setScene(new Scene(root));
-                    stage.show();
+                    Stage stageTres = new Stage();
+                    stageTres.setScene(new Scene(root));
+                    stageTres.show();
+                } else {
+                    JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");
                 }
-                else{JOptionPane.showMessageDialog(null, "El Usuario o el Pin introducidos son incorrectos");}
                 break;
 
         }
+
+        Node source = (Node) event.getSource();
+        Stage stage = (Stage) source.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     private void pulsarCancelarCredenciales(ActionEvent event) {
+
+        Node source = (Node) event.getSource();
+        Stage stage = (Stage) source.getScene().getWindow();
+        stage.close();
+
     }
 
     @FXML
     private void pulsarUno(ActionEvent event) {
-        
-        if (idIn.isFocused()){
-            nuevoId = nuevoId+"1";
+
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "1";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"1";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "1";
             pinIn.setText(nuevoPin);
         }
     }
 
     @FXML
     private void pulsarDos(ActionEvent event) {
-         if (idIn.isFocused()){
-            nuevoId = nuevoId+"2";
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "2";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"2";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "2";
             pinIn.setText(nuevoPin);
         }
     }
 
     @FXML
     private void pulsarTres(ActionEvent event) {
-        if (idIn.isFocused()){
-            nuevoId = nuevoId+"3";
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "3";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"3";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "3";
             pinIn.setText(nuevoPin);
         }
     }
 
     @FXML
     private void pulsarCuatro(ActionEvent event) {
-        if (idIn.isFocused()){
-            nuevoId = nuevoId+"4";
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "4";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"4";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "4";
             pinIn.setText(nuevoPin);
         }
     }
 
     @FXML
     private void pulsarCinco(ActionEvent event) {
-         if (idIn.isFocused()){
-            nuevoId = nuevoId+"5";
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "5";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"5";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "5";
             pinIn.setText(nuevoPin);
         }
     }
 
     @FXML
     private void pulsarSeis(ActionEvent event) {
-        if (idIn.isFocused()){
-            nuevoId = nuevoId+"6";
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "6";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"6";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "6";
             pinIn.setText(nuevoPin);
         }
     }
 
     @FXML
     private void PulsarSiete(ActionEvent event) {
-         if (idIn.isFocused()){
-            nuevoId = nuevoId+"7";
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "7";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"7";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "7";
             pinIn.setText(nuevoPin);
         }
     }
 
     @FXML
     private void PulsarOcho(ActionEvent event) {
-         if (idIn.isFocused()){
-            nuevoId = nuevoId+"8";
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "8";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"8";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "8";
             pinIn.setText(nuevoPin);
         }
     }
 
     @FXML
     private void PulsarNueve(ActionEvent event) {
-         if (idIn.isFocused()){
-            nuevoId = nuevoId+"9";
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "9";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"9";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "9";
             pinIn.setText(nuevoPin);
         }
     }
 
     @FXML
     private void PulsarCero(ActionEvent event) {
-        if (idIn.isFocused()){
-            nuevoId = nuevoId+"0";
+        if (idIn.isFocused()) {
+            nuevoId = nuevoId + "0";
             idIn.setText(nuevoId);
-        }
-        else if(pinIn.isFocused()){
-            nuevoPin = nuevoPin+"0";
+        } else if (pinIn.isFocused()) {
+            nuevoPin = nuevoPin + "0";
             pinIn.setText(nuevoPin);
         }
     }
-    
+
 }
