@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cajero.PanelOperacionController">
+<children>
+      <Label layoutX="150.0" layoutY="61.0" text="Cantidad">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="222.0" layoutY="57.0" />
+      <Button fx:id="aceptarOperaciones" layoutX="194.0" layoutY="192.0" mnemonicParsing="false" onAction="#pulsarAceptar" text="Aceptar" />
+      <Button fx:id="cancelarOperaciones" cancelButton="true" layoutX="286.0" layoutY="192.0" mnemonicParsing="false" onAction="#pulsarCancelar" text="Cancelar" />
+      <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagen1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="45.0" layoutY="9.0" text="BC">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="25.0" layoutY="57.0" prefHeight="167.0" prefWidth="104.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="45.59998168945312" minHeight="10.0" prefHeight="44.00000610351562" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="39.20001831054688" minHeight="10.0" prefHeight="32.79999389648438" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="numeroUno" mnemonicParsing="false" onAction="#pulsarUno" text="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="numeroDos" mnemonicParsing="false" onAction="#pulsarDos" text="2" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="numeroTres" mnemonicParsing="false" onAction="#pulsarTres" text="3" GridPane.columnIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="numeroCuatro" mnemonicParsing="false" onAction="#pulsarCuatro" text="4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="numeroCinco" mnemonicParsing="false" onAction="#pulsarCinco" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="numeroSeis" mnemonicParsing="false" onAction="#pulsarSeis" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="numeroSiete" mnemonicParsing="false" onAction="#PulsarSiete" text="7" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="numeroOcho" mnemonicParsing="false" onAction="#PulsarOcho" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="numeroNueve" mnemonicParsing="false" onAction="#PulsarNueve" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="numeroCero" mnemonicParsing="false" onAction="#PulsarCero" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Button fx:id="diezE" layoutX="175.0" layoutY="95.0" mnemonicParsing="false" onAction="#PulsarDiezE" prefHeight="25.0" prefWidth="42.0" text="10€" />
+      <Button fx:id="veinteE" layoutX="243.0" layoutY="95.0" mnemonicParsing="false" onAction="#PulsarVeinteE" prefHeight="25.0" prefWidth="42.0" text="20€" />
+      <Button fx:id="ciencuentaE" layoutX="315.0" layoutY="95.0" mnemonicParsing="false" onAction="#PulsarCincuanteE" prefHeight="25.0" prefWidth="42.0" text="50€" />
+      <Button fx:id="cienE" layoutX="175.0" layoutY="143.0" mnemonicParsing="false" onAction="#PulsarCienE" text="100€" />
+      <Button fx:id="cientoCiencuentaE" layoutX="243.0" layoutY="143.0" mnemonicParsing="false" onAction="#PulsarCientoCincuentaE" text="150€" />
+      <Button fx:id="DoscientosE" layoutX="315.0" layoutY="143.0" mnemonicParsing="false" onAction="#PulsarDoscientosE" text="200€" />
+      <Label layoutX="151.0" layoutY="31.0" prefHeight="17.0" prefWidth="226.0" text=" Por favor introduzca la cantidad deseada" />
+   </children>
+</Pane>
