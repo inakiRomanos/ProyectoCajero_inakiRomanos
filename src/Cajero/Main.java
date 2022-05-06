@@ -14,6 +14,7 @@ import javafx.stage.Stage;
  */
 public class Main extends Application {
 
+    static public boolean comprobar = false;
 
     public static void main(String[] args) {
         launch(args);

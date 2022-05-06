@@ -59,6 +59,11 @@ public class NuevoPinController implements Initializable {
     String rePin = "";
     String id = "";
 
+    static public String user;
+    static public String oldPin;
+    static public String newPin;
+    static public String rewPin;
+
     /**
      * Initializes the controller class.
      */
@@ -239,6 +244,16 @@ public class NuevoPinController implements Initializable {
 
     @FXML
     private void preAceptar(ActionEvent event) {
+        user = usuarioIn.getText();
+        newPin = pinNuevo.getText();
+        oldPin = pinAntiguo.getText();
+        rewPin = repetirPin.getText();
+
+        ComprobarCredenciales.cambiarPin();
+
+        Node source = (Node) event.getSource();
+        Stage stage = (Stage) source.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
