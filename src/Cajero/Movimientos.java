@@ -4,8 +4,6 @@
  */
 package Cajero;
 
-import java.util.Date;
-
 /**
  *
  * @author i_rom

@@ -60,8 +60,6 @@ public class PanelOperacionController implements Initializable {
 
     int nuevaCantidad = 0;
     String numero = "";
-    @FXML
-    private Button borrar;
 
     /**
      * Initializes the controller class.
@@ -171,7 +169,6 @@ public class PanelOperacionController implements Initializable {
         cantidadIn.setText("200");
     }
 
-    @FXML
     private void Borrar(ActionEvent event) {
         cantidadIn.setText("");
     }
