@@ -6,6 +6,7 @@ package Cajero;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -30,18 +31,28 @@ public class TablaConsultasController implements Initializable {
     private TableColumn tbOperacion;
     @FXML
     private TableColumn tbTotal;
-    
-    private ObservableList<Movimientos> movimiento;
+
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
+        ObservableList<Movimientos> movimiento;
+
+        movimiento = FXCollections.observableArrayList();
+
         this.tbFecha.setCellFactory(new PropertyValueFactory("fecha"));
         this.tbCantidad.setCellFactory(new PropertyValueFactory("Cantidad"));
         this.tbOperacion.setCellFactory(new PropertyValueFactory("operacion"));
         this.tbTotal.setCellFactory(new PropertyValueFactory("total"));
-    }    
-    
+
+        Movimientos m1 = new Movimientos("01/01/22", "130", "INGRESO", 1650);
+
+        movimiento.add(m1);
+        this.tablaMovimientos.setItems(movimiento);
+
+    }
+
 }
