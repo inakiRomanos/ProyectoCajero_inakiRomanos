@@ -32,26 +32,29 @@ public class TablaConsultasController implements Initializable {
     @FXML
     private TableColumn tbTotal;
 
-
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        ObservableList<Movimientos> movimiento;
+        ObservableList<Movimientos> m1;
+ 
 
-        movimiento = FXCollections.observableArrayList();
+        m1 = FXCollections.observableArrayList();       
 
-        this.tbFecha.setCellFactory(new PropertyValueFactory("fecha"));
-        this.tbCantidad.setCellFactory(new PropertyValueFactory("Cantidad"));
-        this.tbOperacion.setCellFactory(new PropertyValueFactory("operacion"));
-        this.tbTotal.setCellFactory(new PropertyValueFactory("total"));
 
-        Movimientos m1 = new Movimientos("01/01/22", "130", "INGRESO", 1650);
+        tbFecha.setCellValueFactory(new PropertyValueFactory("fecha"));
+        tbCantidad.setCellValueFactory(new PropertyValueFactory("cantidad"));
+        tbOperacion.setCellValueFactory(new PropertyValueFactory("operacion"));
+        tbTotal.setCellValueFactory(new PropertyValueFactory("total"));
 
-        movimiento.add(m1);
-        this.tablaMovimientos.setItems(movimiento);
+        m1.add(new Movimientos("01/01/22", "130", "INGRESO", 1650));
+        m1.add(new Movimientos("02/01/22", "100", "GASTO", 1550));
+        m1.add(new Movimientos("03/01/22", "50", "INGRESO", 1700));
+        m1.add(new Movimientos("04/01/22", "20", "INGRESO", 1720));
+        
+        tablaMovimientos.setItems(m1);
 
     }
 
