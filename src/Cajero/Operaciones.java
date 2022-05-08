@@ -1,61 +1,69 @@
 package Cajero;
 
-import java.util.Date;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+
+import Cajero.Main;
+import Cajero.PanelOperacionController;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 
 /**
  *
  * @author i_rom
  */
-
-   
-@Entity //Anotación que indica que esta es una clase que debe almacenarse en la base de datos
 public class Operaciones {
+    static public String operacionFecha;
+    static public String operacionCantidad;
+    static public String operacionOperacion;
+    static public int  operacionTotal;
 
-    @Id //Anotación que indica que este atributo es la clave primaria 
-    private Date fecha;
-    private int cantidad;
-    private String tipo;
-
-    public Operaciones (Date fecha, int cantidad, String tipo) {
-        this.fecha= fecha;
-        this.cantidad = cantidad;
-        this.tipo = tipo;
+    public Operaciones() {
     }
 
-    //métodos básicos para asignar y obtener valores de atributos
-    public Date getFecha() {
-        return fecha;
+    public static String getOperacionFecha() {
+        return operacionFecha;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public static void setOperacionFecha(String operacionFecha) {
+        Operaciones.operacionFecha = operacionFecha;
     }
 
-
-    public int getCantidad() {
-        return cantidad;
+    public static String getOperacionCantidad() {
+        return operacionCantidad;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public static void setOperacionCantidad(String operacionCantidad) {
+        Operaciones.operacionCantidad = operacionCantidad;
     }
 
-    public String getTipo() {
-        return tipo;
+    public static String getOperacionOperacion() {
+        return operacionOperacion;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public static void setOperacionOperacion(String operacionOperacion) {
+        Operaciones.operacionOperacion = operacionOperacion;
     }
 
-    @Override
-    //comportamiento del método toString heredado de la superclase Objet
-    //Devuelve los atributos de un objeto Ponente
-    public String toString() {
-        return this.fecha + " " + this.cantidad + " " + this.tipo;
+    public static int getOperacionTotal() {
+        return operacionTotal;
     }
+
+    public static void setOperacionTotal(int operacionTotal) {
+        Operaciones.operacionTotal = operacionTotal;
+    }
+    
+    public static void suma(){
+        
+        operacionTotal = Main.totaltotal + PanelOperacionController.cantidaDeLaOperacion;
+        
+    }
+    
+    public static void resta(){
+        
+        operacionTotal = Main.totaltotal + PanelOperacionController.cantidaDeLaOperacion;
+        
+    }
+    
 }

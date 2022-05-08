@@ -30,7 +30,8 @@ public class TablaConsultasController implements Initializable {
     @FXML
     private TableColumn tbOperacion;
     @FXML
-    private TableColumn tbTotal;
+    public TableColumn tbTotal;
+
 
     /**
      * Initializes the controller class.
@@ -38,24 +39,15 @@ public class TablaConsultasController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        ObservableList<Movimientos> m1;
- 
-
-        m1 = FXCollections.observableArrayList();       
-
 
         tbFecha.setCellValueFactory(new PropertyValueFactory("fecha"));
         tbCantidad.setCellValueFactory(new PropertyValueFactory("cantidad"));
         tbOperacion.setCellValueFactory(new PropertyValueFactory("operacion"));
         tbTotal.setCellValueFactory(new PropertyValueFactory("total"));
 
-        m1.add(new Movimientos("01/01/22", "130", "INGRESO", 1650));
-        m1.add(new Movimientos("02/01/22", "100", "GASTO", 1550));
-        m1.add(new Movimientos("03/01/22", "50", "INGRESO", 1700));
-        m1.add(new Movimientos("04/01/22", "20", "INGRESO", 1720));
-        
-        tablaMovimientos.setItems(m1);
+        tablaMovimientos.setItems(Main.l);
 
     }
+
 
 }

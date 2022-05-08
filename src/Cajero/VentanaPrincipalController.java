@@ -21,6 +21,7 @@ import javafx.stage.Stage;
 public class VentanaPrincipalController implements Initializable {
     
     static public int operacion = 0;
+    static public String operacionBoton = "neutro";
 
     @FXML
     private Button botonRetirar;
@@ -36,16 +37,19 @@ public class VentanaPrincipalController implements Initializable {
     @FXML
     private void pulsarRetirar(ActionEvent event) throws IOException {
         operacion = 1;
+        operacionBoton = "retirar";
          FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("Credenciales.fxml"));
          Parent root = (Parent) fmxlLoader.load();
          Stage stage = new Stage();
          stage.setScene(new Scene(root));
          stage.show();
+  
     }
 
     @FXML
     private void pulsarIngresar(ActionEvent event) throws IOException {
         operacion = 2;
+        operacionBoton = "ingresar";
         FXMLLoader fmxlLoader = new FXMLLoader(getClass().getResource("Credenciales.fxml"));
          Parent root = (Parent) fmxlLoader.load();
          Stage stage = new Stage();

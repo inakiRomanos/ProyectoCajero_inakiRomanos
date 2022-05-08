@@ -4,13 +4,21 @@
  */
 package Cajero;
 
+
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -60,6 +68,8 @@ public class PanelOperacionController implements Initializable {
 
     int nuevaCantidad = 0;
     String numero = "";
+    static public int cantidaDeLaOperacion;
+    
 
     /**
      * Initializes the controller class.
@@ -71,10 +81,40 @@ public class PanelOperacionController implements Initializable {
 
     @FXML
     private void pulsarAceptar(ActionEvent event) {
+        cantidaDeLaOperacion = Integer.parseInt(cantidadIn.getText());
+        if (VentanaPrincipalController.operacionBoton.equals("retirar")) {
+           Operaciones.setOperacionFecha(LocalDate.now().toString());
+           Operaciones.setOperacionOperacion("GASTO");
+           Operaciones.setOperacionCantidad(cantidadIn.getText());
+           Operaciones.resta();
+        }
+        else if (VentanaPrincipalController.operacionBoton.equals("ingresar")) {
+           Operaciones.setOperacionFecha(LocalDate.now().toString());
+           Operaciones.setOperacionOperacion("INGRESO");
+           Operaciones.setOperacionCantidad(cantidadIn.getText());
+           Operaciones.suma();
+        }
+           
+        
+        Main.l.add(new Movimientos(Operaciones.getOperacionFecha(), Operaciones.getOperacionCantidad(), 
+                Operaciones.getOperacionOperacion(), Operaciones.getOperacionTotal()));
+
+        
+        JOptionPane.showMessageDialog(null, "Su operacion ha sido realizada");
+        
+         Node source = (Node) event.getSource();
+        Stage stage = (Stage) source.getScene().getWindow();
+        stage.close();
+        
+        
     }
 
     @FXML
     private void pulsarCancelar(ActionEvent event) {
+        
+         Node source = (Node) event.getSource();
+        Stage stage = (Stage) source.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
